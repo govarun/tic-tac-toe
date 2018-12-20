@@ -1,2 +1,1 @@
-# tic-tac-toe
-Tic Tac Toe implemented on python
+#tic tac toe using git command line
