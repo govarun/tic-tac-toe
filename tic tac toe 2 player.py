@@ -23,6 +23,8 @@ player2 = 2
 ##hor_start_y = 100 + 400//3
 ##hor_end_x = 650
 ##hor_end_y = 100 + 800//3
+
+# To draw the entire board that will be displayed when the game starts, i.e has basic visual elements and their size and shape.
 def draw_board(board):
     game_display.fill(white)
     pygame.draw.line(game_display, black, (300,100), (300,700))
@@ -39,13 +41,14 @@ def draw_board(board):
     
     pygame.display.update()
     clock.tick()
-
+# To get the initial empty board, which we will use later.
 def get_board():
     board = []
     for i in range(board_size):
         board.append([None]*board_size)
     return board
 
+# To return rectangle for text objects, the text is displayed using the function to dsplay the rectangle.
 def text_objects(text,font,color):
     text_surf = font.render(text, True, color)
     return text_surf,text_surf.get_rect()
